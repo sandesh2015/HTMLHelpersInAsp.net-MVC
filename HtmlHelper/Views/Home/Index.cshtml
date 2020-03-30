@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@helper getNameInBold(string name)
+    {
+        <p>My name is :<b>@name</b></p>
+    }
+
+<h3>Calling Inline helper</h3>
+@getNameInBold("sandesh")
+
+
+@helper getProgList(string[] name)
+{
+    
+<ul>
+    @foreach (var item in name)
+    {
+    <li>@item</li>
+    }
+</ul>
+
+    
+}
+
+<h3>List of programming language is </h3>
+@getProgList(new string[] { "C#", "Java", "Python" });
